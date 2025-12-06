@@ -1,0 +1,96 @@
+.navbar-custom {
+    background: white;
+    color: #061025;
+    border-radius: 40px;
+    padding: 8px 25px;
+    margin: 15px auto;
+    width: 92%;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    
+}
+
+.navbar-custom .nav-link {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 17px;
+    font-weight: 600;
+    color: #061025 ;
+    text-decoration: none;
+    
+}
+
+.btn-main{
+    background-color: #061025 !important;
+    color: #f7f7f7 !important;
+    padding: 8px 20px !important;
+    border-radius: 12px !important;
+}
+
+.btn-main:hover {
+    background-color: #D2EEE1 !important;
+    color: rgb(0, 0, 0) !important;
+    border: 1px solid #061025 !important;
+}
+
+
+.btn-nav{
+    background-color: #061025 !important;
+    color: #f7f7f7 !important;
+    padding: 8px 20px !important;
+    border-radius: 12px !important;
+}
+
+
+.btn-nav:hover {
+    background-color: #ffffff !important;
+    color: rgb(0, 0, 0) !important;
+    border: 1px solid #061025 !important;
+}
+
+.hero {
+    background: #D2EEE1;
+    padding: 60px 20px;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+}
+
+.hero h1 {
+    font-weight: 800;
+    color: #060F25;
+}
+
+.hero p {
+    font-size: 17px;
+    color: #6B7280;
+}
+
+.card-box {
+    border-radius: 15px;
+    padding: 25px;
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+.card-box p{
+    color:#6B7280;
+    
+}
+
+i{
+  font-size: 50px;  
+}
+.cta-section {
+    background: #D2EEE1;
+    padding: 60px 20px;
+    border-radius: 30px;
+    margin-top: 40px;
+}
+
+footer {
+    background: #060F25;
+    color: white;
+    text-align: center;
+    padding: 12px;
+    margin-top: 40px;
+}
+
+
