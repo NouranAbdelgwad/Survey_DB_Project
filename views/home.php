@@ -27,7 +27,7 @@
                 <div class="col-lg-6">
                     <h1>Your Opinion Matters!</h1>
                     <p>Take a few minutes to complete our survey and help improve courses, services, and campus life.</p>
-                    <a href="/views/survey.php" class="btn btn-main px-4 py-2 rounded-4 me-3">Start Survey</a>
+                    <a href="../views/survey1.php" class="btn btn-main px-4 py-2 rounded-4 me-3">Start Survey</a>
                 </div>
 
                 <div class="col-lg-6 text-center">
@@ -65,7 +65,7 @@
     <!-- Call to action -->
     <section class="cta-section text-center">
         <h2 class="fw-bold">Ready to Make Your Voice Heard?</h2>
-        <a href="/views/survey.php" class="btn btn-main px-4 py-2 rounded-4 me-3">Start Survey</a>
+        <a href="../views/survey1.php" class="btn btn-main px-4 py-2 rounded-4 me-3">Start Survey</a>
     </section>
 
     

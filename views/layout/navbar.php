@@ -28,7 +28,7 @@
                 <li class="nav-item mx-2"><a class="nav-link" href="../views/about_us.php">About us</a></li>
             </ul>
 
-            <a href="../views/survey.php" class="btn btn-nav px-4 py-2 rounded-4 me-3">Start Survey</a>
+            <a href="../views/survey1.php" class="btn btn-nav px-4 py-2 rounded-4 me-3">Start Survey</a>
         </div>
     </nav>
 </body>
