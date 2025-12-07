@@ -24,11 +24,11 @@
 
         <div class="collapse navbar-collapse justify-content-end" id="navMenu">
             <ul class="navbar-nav mx-auto text-center">
-                <li class="nav-item mx-2"><a class="nav-link" href="/views/home.php">Home</a></li>
-                <li class="nav-item mx-2"><a class="nav-link" href="/views/about_us.php">About us</a></li>
+                <li class="nav-item mx-2"><a class="nav-link" href="../views/home.php">Home</a></li>
+                <li class="nav-item mx-2"><a class="nav-link" href="../views/about_us.php">About us</a></li>
             </ul>
 
-            <a href="/views/survey.php" class="btn btn-nav px-4 py-2 rounded-4 me-3">Start Survey</a>
+            <a href="../views/survey.php" class="btn btn-nav px-4 py-2 rounded-4 me-3">Start Survey</a>
         </div>
     </nav>
 </body>
