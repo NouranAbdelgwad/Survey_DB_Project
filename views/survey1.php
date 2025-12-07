@@ -61,6 +61,7 @@
 
         <!-- BUTTONS -->
         <div class="d-flex justify-content-between mt-5">
+            <a href="user_info.php" class="btn btn-dark px-5 py-2 rounded-3">Previous</a>
             <a href="survey2.php" class="btn btn-dark px-5 py-2 rounded-3">Next</a>
         </div>
     </div>

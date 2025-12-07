@@ -15,7 +15,7 @@
 <body>
 
 <nav class="navbar navbar-expand-lg navbar-light navbar-custom">
-        <a class="navbar-brand ms-2" href="#">
+        <a class="navbar-brand ms-2" href="../views/home.php">
             <img src="../assets/imgs/image 4.png" height="50">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
@@ -28,7 +28,7 @@
                 <li class="nav-item mx-2"><a class="nav-link" href="../views/about_us.php">About us</a></li>
             </ul>
 
-            <a href="../views/survey1.php" class="btn btn-nav px-4 py-2 rounded-4 me-3">Start Survey</a>
+            <a href="../views/user_info.php" class="btn btn-nav px-4 py-2 rounded-4 me-3">Start Survey</a>
         </div>
     </nav>
 </body>

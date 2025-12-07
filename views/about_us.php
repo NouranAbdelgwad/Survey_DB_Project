@@ -90,7 +90,7 @@
     <!-- CALL TO ACTION -->
     <section class="cta-section text-center">
         <h2 class="fw-bold">Ready to Make Your Voice Heard?</h2>
-        <a href="/views/survey.php" class="btn btn-main px-4 py-2 rounded-4 me-3">Start Survey</a>
+        <a href="../views/user_info.php" class="btn btn-main px-4 py-2 rounded-4 me-3">Start Survey</a>
     </section>
 
 

@@ -1,3 +1,11 @@
+<?php
+session_start();
+if (!isset($_SESSION["admin"])) {
+    header("Location: login.php");
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 
@@ -92,8 +100,8 @@
 
         <div class="collapse navbar-collapse justify-content-end" id="navMenu">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item mx-2"><a class="nav-link" href="/views/home.php">Home</a></li>
-                <li class="nav-item mx-2"><a class="nav-link" href="/views/about_us.php">About us</a></li>
+                <li class="nav-item mx-2"><a class="nav-link" href="../views/home.php">Home</a></li>
+                <li class="nav-item mx-2"><a class="nav-link" href="../views/about_us.php">About us</a></li>
                 <li class="nav-item mx-2"><a class="nav-link" href="#">Analysis</a></li>
             </ul>
 

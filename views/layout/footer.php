@@ -13,6 +13,6 @@
 
 <body>
     <footer>
-            © 2025 OTU. All rights reserved.
+            © 2025 OTU. All rights reserved. <a href="../views/login.php" class="text-light">login as admin?</a>
     </footer>
 </body>
