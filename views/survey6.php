@@ -19,17 +19,7 @@
 <body>
 
     <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-lg bg-white shadow-sm rounded-pill px-4 mt-3 mx-3">
-        <a class="navbar-brand d-flex align-items-center" href="#">
-            <img src="logo.png" alt="Logo" height="55">
-        </a>
-
-        <div class="ms-auto d-flex gap-4 align-items-center">
-            <a class="fw-semibold text-dark" href="#">Home</a>
-            <a class="fw-semibold text-dark" href="#">About us</a>
-        </div>
-    </nav>
-
+    <?php include_once 'layout/survey_navbar.php'; ?>
     <!-- MAIN BOX -->
     <div class="container form-wrapper shadow-sm">
 
