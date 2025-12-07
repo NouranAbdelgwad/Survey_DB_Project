@@ -1,6 +1,5 @@
 <?php include '../connection/db.php' ?>
 <?php
-session_start();
 $years   = getEnumValues($connection, "students", "level");
 $colleges = getEnumValues($connection, "students", "college");
 $majors  = getEnumValues($connection, "students", "major");
@@ -14,13 +13,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email      = $_POST['email'];
     $major      = $_POST['major'];      
 
-
     $check_sql = "SELECT * FROM students WHERE Student_ID = '$student_id'";
     $result = mysqli_query($connection, $check_sql);
 
     if (mysqli_num_rows($result) > 0) {
+        // Student exists, show message and stop execution
         echo "<div class='alert alert-danger text-center'>This student has already submitted before.</div>";
     } else {
+        // Insert new student
         $sql = "INSERT INTO students 
                 (Student_ID, name, email, level, college, major)
                 VALUES 
@@ -30,12 +30,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             die('SQL Error: ' . mysqli_error($connection));
         }
 
-    // $sid = mysqli_insert_id($connection);
+        $sid = mysqli_insert_id($connection);
 
-    header("Location: survey.php");
-    exit();
+        header("Location: survey.php?sid=$sid");
+        exit();
     }
 }
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -133,7 +135,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 
             <div class="text-end mt-4">
-                <input type="submit" value="Next" class="btn btn-dark px-5 py-2 rounded-3">
+                <input type="submit" value="Next" class="btn btn-dark px-5 py-2 rounded-3"></a>
             </div>
         </form>
     </div>
