@@ -15,18 +15,24 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $major      = $_POST['major'];      
 
 
-    $sql = "INSERT INTO students 
-            (Student_ID, name, email, level, college, major)
-            VALUES 
-            ('$student_id', '$name', '$email', '$level', '$college', '$major')";
+    $check_sql = "SELECT * FROM students WHERE Student_ID = '$student_id'";
+    $result = mysqli_query($connection, $check_sql);
 
-    if (!mysqli_query($connection, $sql)) {
-        die('SQL Error: ' . mysqli_error($connection));
-    }
+    if (mysqli_num_rows($result) > 0) {
+        echo "<div class='alert alert-danger text-center'>This student has already submitted before.</div>";
+    } else {
+        $sql = "INSERT INTO students 
+                (Student_ID, name, email, level, college, major)
+                VALUES 
+                ('$student_id', '$name', '$email', '$level', '$college', '$major')";
+
+        if (!mysqli_query($connection, $sql)) {
+            die('SQL Error: ' . mysqli_error($connection));
+        }
 
     $sid = mysqli_insert_id($connection);
-    $_SESSION["student_id"] = $sid;
-    header("Location: survey.php?sid=$sid");
+
+    header("Location: survey1.php?sid=$sid");
     exit();
 }
 
