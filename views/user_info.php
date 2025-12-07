@@ -30,12 +30,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             die('SQL Error: ' . mysqli_error($connection));
         }
 
-    $sid = mysqli_insert_id($connection);
+    // $sid = mysqli_insert_id($connection);
 
-    header("Location: survey1.php?sid=$sid");
+    header("Location: survey.php");
     exit();
+    }
 }
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -133,7 +133,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 
             <div class="text-end mt-4">
-                <input type="submit" value="Next" class="btn btn-dark px-5 py-2 rounded-3"></a>
+                <input type="submit" value="Next" class="btn btn-dark px-5 py-2 rounded-3">
             </div>
         </form>
     </div>
