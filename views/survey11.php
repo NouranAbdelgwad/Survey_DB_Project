@@ -1,5 +1,5 @@
 <?php
-include "../controllers/RecommenController.php"
+include "../controllers/RecommendController.php"
 
 ?>
 <!DOCTYPE html>
