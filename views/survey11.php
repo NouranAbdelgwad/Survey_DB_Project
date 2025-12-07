@@ -1,3 +1,7 @@
+<?php
+include "../controllers/RecommenController.php"
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -45,17 +49,18 @@
             What improvements would you recommend?
         </h4>
 
-        <!-- MESSAGE BOX -->
-        <div class="mb-4">
-            <textarea class="improve-textarea form-control" placeholder="Write a message..."></textarea>
-        </div>
+        <form method="POST">
+            <div class="mb-4">
+                <!-- MESSAGE BOX -->
+                <textarea class="improve-textarea form-control" placeholder="Write a message..." name="answer_text"></textarea>
+            </div>
 
-
-        <!-- BUTTONS -->
-        <div class="d-flex justify-content-between mt-5">
-            <a href="survey10.php" class="btn btn-dark px-5 py-2 rounded-3">Previous</a>
-            <a href="survey11.php" class="btn btn-dark px-5 py-2 rounded-3">Submit</a>
-        </div>
+            <!-- BUTTONS -->
+            <div class="d-flex justify-content-between mt-5">
+                <a href="survey.php?q=10" class="btn btn-dark px-5 py-2 rounded-3">Previous</a>
+                <button class="btn btn-dark px-5 py-2 rounded-3" type="submit">Submit</button>
+            </div>
+        </form>
     </div>
 
     <!-- INTERNAL JS -->
