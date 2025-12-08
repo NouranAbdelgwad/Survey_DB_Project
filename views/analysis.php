@@ -218,17 +218,17 @@ $messages_result = mysqli_query($connection, $messages_query);
 
                     // 🔥 Different colors for each bar
                     backgroundColor: [
-                        "#1abc9c", // Greenish
-                        "#3498db", // Blue
-                        "#9b59b6", // Purple
-                        "#e67e22" // Orange
+                        "#0e4137ff", 
+                        "#3f484dff", 
+                        "#4e7441ff", 
+                        "#7a726bff" 
                     ],
 
                     borderColor: [
-                        "#16a085",
-                        "#2980b9",
-                        "#8e44ad",
-                        "#d35400"
+                        "#0e4137ff",
+                        "#405664ff",
+                        "#4e7441ff",
+                        "#7a726bff"
                     ],
 
                     borderWidth: 2,
