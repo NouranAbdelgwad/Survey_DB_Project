@@ -56,7 +56,7 @@
         <img src="../assets/imgs/image 6.png" class="img-fluid my-4" style="max-width: 380px;">
 
         <div class="mt-3">
-            <a href="/views/home.php" class="action-btn-dark btn me-3">Back Home</a>
+            <a href="home.php" class="action-btn-dark btn me-3">Back Home</a>
         </div>
 
     </div>

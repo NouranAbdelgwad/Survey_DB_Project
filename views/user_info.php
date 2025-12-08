@@ -1,6 +1,6 @@
-<?php include '../connection/db.php' ?>
 <?php
 session_start();
+include '../connection/db.php';
 $years   = getEnumValues($connection, "students", "level");
 $colleges = getEnumValues($connection, "students", "college");
 $majors  = getEnumValues($connection, "students", "major");
@@ -14,6 +14,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email      = $_POST['email'];
     $major      = $_POST['major'];      
 
+
+    $sql = "INSERT INTO students 
+            (Student_ID, name, email, level, college, major)
+            VALUES 
+            ('$student_id', '$name', '$email', '$level', '$college', '$major')";
 
     $check_sql = "SELECT * FROM students WHERE Student_ID = '$student_id'";
     $result = mysqli_query($connection, $check_sql);
@@ -30,11 +35,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             die('SQL Error: ' . mysqli_error($connection));
         }
 
-    $sid = mysqli_insert_id($connection);
+        $sid = mysqli_insert_id($connection);
+        $_SESSION["student_id"] = $sid;
+        header("Location: survey.php?sid=$sid");
+        exit();
+    }
 
-    header("Location: survey1.php?sid=$sid");
-    exit();
+    
+
 }
+
 
 ?>
 <!DOCTYPE html>

@@ -19,7 +19,6 @@
     <?php include "../controllers/SurveyController.php" ?>
     <!-- MAIN BOX -->
     <div class="container form-wrapper shadow-sm">
-
         <!-- QUESTION ICON -->
         <div class="text-center mb-4">
             <div class="question-icon">
@@ -39,8 +38,7 @@
 
         <form method="POST">
 
-            <!-- <input type="hidden" name="question_id" value="<?php echo $question['id']; ?>"> -->
-
+            <input type="hidden" name="question_id" value="<?php echo $question['id']; ?>">
             <!-- QUESTION -->
             <h4 class="fw-bold mt-4 mb-4" style="color:#1B263B;">
                 <?php echo $question['question_text']; ?>
