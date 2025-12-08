@@ -75,7 +75,7 @@ $messages_result = mysqli_query($connection, $messages_query);
     <!-- CSS -->
     <style>
         body {
-            background: #e8f6e9;
+            background: white;
             font-family: "Tajawal", sans-serif;
         }
 
@@ -139,23 +139,7 @@ $messages_result = mysqli_query($connection, $messages_query);
 <body>
 
     <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-lg navbar-light navbar-custom">
-        <a class="navbar-brand ms-2" href="../views/home.php">
-            <img src="../assets/imgs/image 4.png" height="50">
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse justify-content-end" id="navMenu">
-            <ul class="navbar-nav mx-auto text-center">
-                <li class="nav-item mx-2"><a class="nav-link" href="../views/home.php">Home</a></li>
-                <li class="nav-item mx-2"><a class="nav-link" href="../views/about_us.php">About us</a></li>
-            </ul>
-
-            <a href="../views/user_info.php" class="btn btn-nav px-4 py-2 rounded-4 me-3">Start Survey</a>
-        </div>
-    </nav>
+     <?php include '../views/layout/navbar.php'?>
 
     <div class="container mt-4">
 
@@ -178,7 +162,7 @@ $messages_result = mysqli_query($connection, $messages_query);
             </div>
         </div>
 
-        <!-- Overview (Pie Chart) -->
+        <!-- Overview (bar Chart) -->
         <div class="section-box">
             <h5 class="fw-bold">Analysis Overview</h5>
             <div class="row mt-3">
@@ -216,7 +200,6 @@ $messages_result = mysqli_query($connection, $messages_query);
                     label: "Satisfaction (%)",
                     data: [<?= $teachQ ?>, <?= $content ?>, <?= $res ?>, <?= $comm ?>],
 
-                    // 🔥 Different colors for each bar
                     backgroundColor: [
                         "#0e4137ff", 
                         "#3f484dff", 
