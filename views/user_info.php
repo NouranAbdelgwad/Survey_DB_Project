@@ -14,7 +14,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email      = $_POST['email'];
     $major      = $_POST['major'];      
 
-
     $sql = "INSERT INTO students 
             (Student_ID, name, email, level, college, major)
             VALUES 
@@ -24,8 +23,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $result = mysqli_query($connection, $check_sql);
 
     if (mysqli_num_rows($result) > 0) {
+        // Student exists, show message and stop execution
         echo "<div class='alert alert-danger text-center'>This student has already submitted before.</div>";
     } else {
+        // Insert new student
         $sql = "INSERT INTO students 
                 (Student_ID, name, email, level, college, major)
                 VALUES 
@@ -40,8 +41,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         header("Location: survey.php?sid=$sid");
         exit();
     }
-
-    
 
 }
 
