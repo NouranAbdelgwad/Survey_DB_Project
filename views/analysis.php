@@ -1,10 +1,20 @@
 <?php
 session_start();
+
+// 5-minute inactivity timeout
+if (isset($_SESSION["LAST_ACTIVITY"]) && (time() - $_SESSION["LAST_ACTIVITY"] > 300)) {
+    session_unset();
+    session_destroy();
+    header("Location: login.php?expired=1");
+    exit();
+}
+
+$_SESSION["LAST_ACTIVITY"] = time();
+
 if (!isset($_SESSION["admin"])) {
     header("Location: login.php");
     exit();
 }
-
 include '../connection/db.php';  // your DB connection
 
 // -----------------------------

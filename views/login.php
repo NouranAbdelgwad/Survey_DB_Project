@@ -1,23 +1,28 @@
 <?php
+ini_set("session.gc_maxlifetime", 300);
+session_set_cookie_params(300);
+
 session_start();
 
-if (!isset($_SESSION["admin"])) {
-    header("Location: login.php");
-    exit();
-}
+// static admin credentials
+$admin_user = "admin";
+$admin_pass = "12345";
 
-if (!isset($_SESSION["LAST_ACTIVITY"])) {
-    $_SESSION["LAST_ACTIVITY"] = time();
-}
+$error = "";
 
-if (time() - $_SESSION["LAST_ACTIVITY"] > 300) { 
-    session_unset();
-    session_destroy();
-    header("Location: login.php?expired=1");
-    exit();
-}
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
-$_SESSION["LAST_ACTIVITY"] = time();
+    $username = $_POST["username"];
+    $password = $_POST["password"];
+
+    if ($username === $admin_user && $password === $admin_pass) {
+        $_SESSION["admin"] = $username;
+        header("Location: analysis.php");
+        exit();
+    } else {
+        $error = "Invalid username or password.";
+    }
+}
 ?>
 
 <!DOCTYPE html>
