@@ -1,25 +1,23 @@
 <?php
 session_start();
 
-// static admin credentials
-$admin_user = "admin";
-$admin_pass = "12345";
-
-$error = "";
-
-if ($_SERVER["REQUEST_METHOD"] === "POST") {
-
-    $username = $_POST["username"];
-    $password = $_POST["password"];
-
-    if ($username === $admin_user && $password === $admin_pass) {
-        $_SESSION["admin"] = $username;
-        header("Location: analysis.php");
-        exit();
-    } else {
-        $error = "Invalid username or password.";
-    }
+if (!isset($_SESSION["admin"])) {
+    header("Location: login.php");
+    exit();
 }
+
+if (!isset($_SESSION["LAST_ACTIVITY"])) {
+    $_SESSION["LAST_ACTIVITY"] = time();
+}
+
+if (time() - $_SESSION["LAST_ACTIVITY"] > 300) { 
+    session_unset();
+    session_destroy();
+    header("Location: login.php?expired=1");
+    exit();
+}
+
+$_SESSION["LAST_ACTIVITY"] = time();
 ?>
 
 <!DOCTYPE html>
